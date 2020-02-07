@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 py-2">
+            <img src="/assets/lamp4.png" routerLink="/home" routerLinkActive="active" alt="Smiley face" height="42"
+                width="42">
+        </div>
+        <div class="col-8 d-flex justify-content-center">
+            <ul class="nav">
+                <li class="nav-item px-5">
+                    <a class="nav-link active" routerLink="/items" routerLinkActive="active">Items</a>
+                </li>
+                <li class="nav-item px-5 ">
+                    <a class="nav-link active" routerLink="/about-us" routerLinkActive="active">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mRight" routerLink="/cart" routerLinkActive="active">Cart</a>
+                </li>
+                <img src="assets/cart.png" routerLink="/cart" routerLinkActive="active" alt="Smiley face" height="50"
+                    width="50">
+            </ul>
+        </div>
+        <div class="col-2">
+            <div class="px-5 py-2">
+           <app-sign-in-modal></app-sign-in-modal>
+            </div>
+        </div>
+    </div>
+</div>

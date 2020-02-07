@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Items for Sale</h1>
+</div>
+<div class="container mt-5 py-5 " *ngFor = 'let item of productList'>
+    <div class="row bg-white outline">
+        <div class="col">
+            <h1 class="center">{{item.pName}}</h1>
+            <img class="py-5" src="{{item.pic}}" alt="Smiley face" height="500" width="500">
+        </div>
+        <div class="col py-5 c-border">
+            <p class="bigSize py-5">• {{item.price}}</p>
+            <p class="bigSize"> {{item.pDesc}}</p>
+            <p class="bigSize">{{item.pDesc2}}</p>
+            <p class="bigSize"> {{item.pDesc3}}</p>
+            <p class="bigSize"> {{item.pDesc4}}</p>
+            <button type="button"  routerLink="/{{item.pNameURL}}/{{item.id}}"class="btn btn-primary btn-size button-float bottom-center width" (click) = "addToCart(item)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<hr class="line">

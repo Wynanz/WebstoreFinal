@@ -1,0 +1,30 @@
+.center{
+    text-align: center;
+}
+
+.underline{
+    text-decoration: underline;
+    color:blue;
+}
+
+.white{
+    background: white;
+}
+
+.c-center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+input{
+    width:50%;
+}
+.parent {
+    height: 100%;
+  }
+.transp{
+    background: transparent;
+    color: blue;
+    border:none;
+}

@@ -1,0 +1,54 @@
+<ngb-carousel #carousel interval="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="carousel-caption">
+            <h3>Genie Lamps {{i + 1}}</h3>
+        </div>
+        <a target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+                <img class="img-fluid" [src]="img" alt="My image {{i + 1}} description" routerLink="/items"
+                    routerLinkActive="active">
+            </div>
+        </a>
+    </ng-template>
+</ngb-carousel>
+<div class="container mt-5">
+    <div class="row bg-white">
+        <div class="col">
+            <H1 class="d-flex justify-content-center">Byzantine Lamp</H1>
+            <img class="py-5" src="/assets/item1Lamp.jpeg" alt="Smiley face" height="500" width="500">
+        </div>
+        <div class="col py-5">
+            <h1 class="bigSize"> • Only $2,000 for three wishes!</h1>
+            <h1 class="bigSize"> • You get THREE wishes!</h1>
+            <h1 class="bigSize"> • This lamp has only been used one other time, resulting in the fall of the Byzantine
+                Empire! The Lamp has been dormant ever since!</h1>
+            <h1 class="bigSize"> • Rub the lamp three times, and whisper "Pls give wish"</h1>
+            <h1 class="bigSize"> • We are not reponsible for any and all wishes that are made by customers! Be careful
+                what you wish for!</h1>
+        </div>
+    </div>
+</div>
+<hr class="line">
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <h1>Reviews</h1>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 px-5">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <img src="../../assets/userPic.png" alt="Smiley face" height="200" width="200">
+        </div>
+        <div class="col mt-5 bg-white">
+            <h3 class="d-flex justify-content-center">User 1 Review</h3>
+            <p class="bigSize d-flex justify-content-center width">This lamp worked perfectly! I followed the
+                instructions,
+                and used the lamp to pay for my Student Loans! Worked exactly as advertised! Thanks, Genie Now! Best
+                company ever!</p>
+        </div>
+    </div>
+</div>
+<hr class="line">
+

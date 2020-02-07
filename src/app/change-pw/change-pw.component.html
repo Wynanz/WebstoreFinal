@@ -1,0 +1,16 @@
+<ng-template #content let-modal>
+  <h1 class="text-c py-3">Change Password</h1>
+  <div class="container py-2 d-flex justify-content-center">
+    <input type="email" class="form-control text-c f-width" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Email">
+  </div>
+  <div class="container py-2 d-flex justify-content-center">
+    <input type="email" class="form-control text-c f-width" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Old Password">
+  </div>
+  <div class="container py-3 d-flex justify-content-center">
+    <input type="password" class="form-control text-c f-width" id="exampleInputPassword1" placeholder=" New Password">
+    <button (click)= "JoinAndClose();" type="button" class="btn btn-primary go">Go</button>
+  </div>
+</ng-template>
+<button  class="btn btn-lg button-back" (click)="open(content)">Change Password</button>

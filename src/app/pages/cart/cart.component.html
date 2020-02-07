@@ -1,0 +1,33 @@
+
+<div class="container mt-5 py-5 " *ngFor = 'let cItem of cartItems'>
+    <div class="row bg-white outline">
+        <div class="col">
+            <h1 class="center">{{cItem.pName}}</h1>
+            <img class="py-5" src="{{cItem.pic}}" alt="Smiley face" height="500" width="500">
+        </div>
+        <div class="col py-5 c-border">
+            <p class="bigSize py-5">• {{cItem.price}}</p>
+            <p class="bigSize"> {{cItem.pDesc}}</p>
+            <p class="bigSize">{{cItem.pDesc2}}</p>
+            <p class="bigSize"> {{cItem.pDesc3}}</p>
+            <p class="bigSize"> {{cItem.pDesc4}}</p>
+            <p class="bigSize"> Quantity: {{cItem.qty}}</p>
+            <button type="button" class="btn btn-primary btn-size button-float bottom-center width" (click) = "removeItem(cItem)">Remove From Cart</button>
+        </div>
+    </div>
+  
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4 d-flex justify-content-end">
+            <button type="button" class="btn btn-primary btn-size button-float bottom-center width"(click) = "removeCartItems()">Remove All Items from Cart</button>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary size" routerLink="/checkout">Purchase</button>
+        </div>
+        <div class="col-4">
+            <p class="size">Price:</p>
+        </div>
+    </div>
+</div>
+<div class="py-5"></div>

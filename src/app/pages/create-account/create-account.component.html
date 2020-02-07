@@ -1,0 +1,37 @@
+<div class="parent d-flex justify-content-center align-items-center">
+    <div class="container white">
+        <h1 class="text-c py-3 c-center">Create Account</h1>
+        <div class="row">
+            <div class="col">
+                <div class="container py-2 d-flex justify-content-center">
+                    <input #email type="email" class="form-control c-center f-width" 
+                        aria-describedby="emailHelp" placeholder="Email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="container py-3 d-flex justify-content-center">
+                    <input #password type="password" class="form-control c-center f-width" 
+                        placeholder="Password">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="container py-3 d-flex justify-content-center">
+                    <input #cpw type="password" class="form-control c-center f-width" 
+                        placeholder=" Repeat Password">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-lg btn-outline-primary" routerLink="/home" (click)="signIn(); signUp(email.value,password.value, cpw.value);">Create Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button *ngIf="signedIn" class="btn btn-lg btn-outline-primary" routerLink="../account-info" routerLinkActive="active">My Account</button>

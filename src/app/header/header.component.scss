@@ -1,0 +1,30 @@
+.container-fluid {
+    background-color:black;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:10;
+    border-radius: 0px 0px 25px 25px;
+}
+.nav-link{
+    color:white;
+}
+
+.mRight{
+    margin: 0;
+}
+.nav-item{
+    font-size: 24px;
+}
+
+.transp{
+    background-color:transparent;
+    color:white;
+    border:none;
+    font-size:24px;
+    
+}
+
+.nav-round{
+    border-radius: 0px 0px 25px 25px;
+}

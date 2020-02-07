@@ -1,0 +1,42 @@
+<!-- <ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Sign In</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group text-c">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Sign In</button> -->
+<ng-template #content let-modal>
+  <h1 class="text-c py-3">Sign in :)</h1>
+  <div class="container py-2 d-flex justify-content-center">
+    <input #email type="email" class="form-control text-c f-width" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Email">
+  </div>
+  <div class="container py-3 d-flex justify-content-center">
+    <input #passWord type="password" class="form-control text-c f-width" id="exampleInputPassword1" placeholder="Password">
+    <button (click)="signIn(); JoinAndClose(); logIn(email.value,passWord.value)" type="button" class="btn btn-primary go">Go</button>
+  </div>
+  <h4 class="text-c py-2">Need an Account?</h4>
+  <h4 class="text-c blue" routerLink="../create-account" routerLinkActive="active">Create Account</h4>
+</ng-template>
+<button *ngIf="!signedIn" class="btn btn-lg btn-outline-primary" (click)="open(content)">Sign In</button>
+<button *ngIf="signedIn" class="btn btn-lg btn-outline-primary" routerLink="../account-info" routerLinkActive="active">My Account</button>
